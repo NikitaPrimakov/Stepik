@@ -120,3 +120,10 @@ firstStr = input() # Nikita.
 secondStr = input() # 25
 
 print("I'm", firstStr, secondStr, 'years old') # I'm Nikita. 25 years old
+
+a = input()
+b = input()
+c = input()
+print(c)
+print(b)
+print(a)
