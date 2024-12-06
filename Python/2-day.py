@@ -26,3 +26,52 @@ new_string = '*'
 
 print('Hello', 'world', sep=new_string) # Hello*world
 
+# Теперь давайте рассмотрим ситуацию, когда у нас не один print(), а несколько.
+
+# Приведённый ниже код:
+
+print("A great man doesn't seek to lead.")
+print("He's called to it. And he answers.")
+
+# Выводит: 
+    # A great man doesn't seek to lead.
+    # He's called to it. And he answers.
+    
+# Как вы можете заметить, после каждого print() курсор переходит на новую строку. 
+# И это поведение тоже не является случайным, потому что у команды print() есть параметр end, определяющий, 
+# что нужно добавить в конец вывода. По умолчанию параметр end равен символу перевода строки (\n).
+
+print("A great man doesn't seek to lead.", end='\n')
+print("He's called to it. And he answers.", end='\n')
+
+# Если перевод строки делать не нужно или требуется указать специальное окончание для вывода, 
+# то следует явно указать значение для параметра end (можем указать через переменную, как и с параметром sep).
+
+print("Hello world", end='!')
+print("My name is Nikita", end='!') # Hello world!My name is Nikita!
+
+# Можно также параметр end задать при помощи переменной
+
+new_end = '!!!'
+
+print("Hello world", end=new_end)
+print("My name is Nikita", end=new_end) # Hello world!!!My name is Nikita!!!
+
+# Примечание 1. Параметры sep и end можно устанавливать одновременно.
+
+print('Hello', 'world', sep='*', end='\n') # Hello*world
+
+# Примечание 2. Для разных команд print() можно задавать разные параметры sep и end.
+
+arg1 = 'Hello'
+sep1 = '_-_'
+end2 = '+++'
+
+print(arg1, 'everyone', sep=sep1, end='! ')
+print('How', 'are', 'you', 'in', '2024?', sep=' ', end=end2) # Hello_-_everyone! How are you in 2024?+++
+
+# Примечание 3. Чтобы убрать все дополнительные выводимые символы, можно установить параметры sep и end команды print() как пустые строки ('').
+
+print('a', 'b', 'c', sep='', end='')
+print('d', 'e', 'f', sep='', end='') # выводит: abcdef
+
