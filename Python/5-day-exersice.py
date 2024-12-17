@@ -149,11 +149,38 @@ print(min(a, b, c))
 # следует вывести текст «Число интересное» (без кавычек), иначе – «Число неинтересное» (без кавычек).
 
 intNum = int(input("Введите исходное 3-х значное число: "))
+
 firstNum = intNum // 100 # первая цифра
 secondNum = intNum % 10  # вторая цифра
 thirdNum = (intNum // 10) % 10 # третья цифры
-print(firstNum, secondNum, thirdNum)
+
+minNum = min(firstNum, secondNum, thirdNum)
+maxNum = max(firstNum, secondNum, thirdNum)
+
+if (maxNum - minNum) == ((firstNum + secondNum + thirdNum) - minNum - maxNum):
+    print("Число интересное")
+else:
+    print("Число неинтересное")
+    
+
+# Задача 11
+
+# Даны пять чисел a1,a2,a3,a4,a5. Напишите программу, которая вычисляет сумму их модулей
+
+a_1 = abs(float(input()))
+a_2 = abs(float(input()))
+a_3 = abs(float(input()))
+a_4 = abs(float(input()))
+a_5 = abs(float(input()))
+
+print(abs(a_1 + a_2 + a_3 + a_4 + a_5))
 
 
+# Задача 12
 
+p_1 = abs(int(input()))
+p_2 = abs(int(input()))
+q_1 = abs(int(input()))
+q_2 = abs(int(input()))
 
+print(abs(p_1 - q_1) + abs(p_2 - q_2))
