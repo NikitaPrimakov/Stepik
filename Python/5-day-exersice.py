@@ -184,3 +184,82 @@ q_1 = abs(int(input()))
 q_2 = abs(int(input()))
 
 print(abs(p_1 - q_1) + abs(p_2 - q_2))
+
+
+# Задача 13
+
+# Даны названия трёх городов. Напишите программу, которая определяет самое короткое и самое 
+# длинное название города.
+
+
+city_1 = input()
+city_2 = input()
+city_3 = input()
+
+len_city_1 = len(city_1)
+len_city_2 = len(city_2)
+len_city_3 = len(city_3)
+
+if  min(len_city_1, len_city_2, len_city_3) == len_city_1 and max(len_city_1, len_city_2, len_city_3) == len_city_2:
+    print(city_1, city_2, sep='\n')
+elif  min(len_city_1, len_city_2, len_city_3) == len_city_1 and max(len_city_1, len_city_2, len_city_3) == len_city_3:
+    print(city_1, city_3, sep='\n')
+elif  min(len_city_1, len_city_2, len_city_3) == len_city_2 and max(len_city_1, len_city_2, len_city_3) == len_city_1:
+    print(city_2, city_1, sep='\n')
+elif  min(len_city_1, len_city_2, len_city_3) == len_city_2 and max(len_city_1, len_city_2, len_city_3) == len_city_3:
+    print(city_2, city_3, sep='\n')
+elif  min(len_city_1, len_city_2, len_city_3) == len_city_3 and max(len_city_1, len_city_2, len_city_3) == len_city_2:
+    print(city_3, city_2, sep='\n')
+elif  min(len_city_1, len_city_2, len_city_3) == len_city_3 and max(len_city_1, len_city_2, len_city_3) == len_city_1:
+    print(city_3, city_1, sep='\n')
+    
+# Альтернатива
+
+first_city = input()
+second_city = input()
+third_city = input()
+
+# ищем минимальную длину среди всех городов
+min_city_len = min(len(first_city), len(second_city), len(third_city))
+# ищем максимальную длину среди всех городов
+max_city_len = max(len(first_city), len(second_city), len(third_city))
+
+# длину каждого города сравниваем с минимальной длиной
+if len(first_city) == min_city_len:
+    print(first_city)
+elif len(second_city) == min_city_len:
+    print(second_city)
+else:
+    print(third_city)
+
+# длину каждого города сравниваем с максимальной длиной
+if len(first_city) == max_city_len:
+    print(first_city)
+elif len(second_city) == max_city_len:
+    print(second_city)
+else:
+    print(third_city)
+    
+    
+# Задача 14
+
+# Вводятся 3 строки в случайном порядке. Напишите программу, которая выясняет, можно ли из длин этих 
+# строк построить арифметическую прогрессию.
+
+first_str = input()
+second_str = input()
+third_str = input()
+
+
+len_first_str = len(first_str)
+len_second_str = len(second_str)
+len_third_str = len(third_str)
+
+min_len_str = min(len(first_str), len(second_str), len(third_str))
+max_len_str = max(len(first_str), len(second_str), len(third_str))
+average_len_str = len_first_str + len_second_str + len_third_str - min_len_str - max_len_str
+
+if (average_len_str - min_len_str) == max_len_str - average_len_str:
+    print("YES")
+else:
+    print("NO")
