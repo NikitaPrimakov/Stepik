@@ -107,9 +107,39 @@ print(a - int(a))
 
 # задача 8
 
-# 
+# Напишите программу, которая находит наименьшее и наибольшее из пяти чисел и выводит текст в следующем формате:
 
+# Наименьшее число = <наименьшее число>
+# Наибольшее число = <наибольшее число>
 
+firstNum, secondNum, thirdNum, fourthNum, fifthNum = int(input()), int(input()), int(input()), int(input()), int(input())
+print("Наименьшее число =", min(firstNum, secondNum, thirdNum, fourthNum, fifthNum))
+print("Наибольшее число =", max(firstNum, secondNum, thirdNum, fourthNum, fifthNum))
+
+# Задача 9
+
+# Напишите программу, которая упорядочивает три числа от большего к меньшему.
+firstNum, secondNum, thirdNum = int(input()), int(input()), int(input())
+
+if min(firstNum, secondNum, thirdNum) == firstNum and max(firstNum, secondNum, thirdNum) == thirdNum:
+    print(thirdNum, secondNum, firstNum, sep='\n')
+elif min(firstNum, secondNum, thirdNum) == firstNum and max(firstNum, secondNum, thirdNum) == secondNum:
+    print(secondNum, thirdNum, firstNum, sep='\n')
+elif min(firstNum, secondNum, thirdNum) == thirdNum and max(firstNum, secondNum, thirdNum) == secondNum:
+    print(secondNum, firstNum, thirdNum, sep='\n')
+elif min(firstNum, secondNum, thirdNum) == secondNum and max(firstNum, secondNum, thirdNum) == firstNum:
+    print(firstNum, thirdNum, secondNum, sep='\n')
+elif min(firstNum, secondNum, thirdNum) == thirdNum and max(firstNum, secondNum, thirdNum) == firstNum:
+    print(firstNum, secondNum, thirdNum, sep='\n')
+elif min(firstNum, secondNum, thirdNum) == secondNum and max(firstNum, secondNum, thirdNum) == thirdNum:
+    print(thirdNum, firstNum, secondNum, sep='\n')
+    
+# Альтернатива
+
+a, b, c = int(input()), int(input()), int(input())
+print(max(a, b, c))
+print(a + b + c - min(a, b, c) - max(a, b, c))
+print(min(a, b, c))
 
 
 
