@@ -263,3 +263,38 @@ if (average_len_str - min_len_str) == max_len_str - average_len_str:
     print("YES")
 else:
     print("NO")
+    
+    
+# Задача 15
+
+# Напишите программу, которая считывает одну строку, после чего выводит «YES» (без кавычек), если во введённой строке есть подстрока «синий»,
+# или «NO» (без кавычек) # в противном случае.
+
+strOne = input()
+
+if 'синий' in strOne:
+    print("YES")
+else:
+    print("NO")
+    
+# Задача 16
+
+# Напишите программу, которая считывает одну строку, после чего выводит «YES» (без кавычек), 
+# если во введённой строке есть подстрока «суббота» или «воскресенье», или «NO» (без кавычек) в противном случае.
+
+str_One = input()
+
+if 'суббота' in str_One or 'воскресенье' in str_One:
+    print("YES")
+else:
+    print("NO")
+    
+
+# Задача 17
+
+str_of_email = input()
+
+if '@' in str_of_email and '.' in str_of_email:
+    print("YES")
+else:
+    print("NO")
