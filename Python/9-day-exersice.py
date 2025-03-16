@@ -1,3 +1,5 @@
+import math 
+
 # Упражнение 1
 
 # На вход программе подаются два целых числа a и b (a ≤ b). Напишите программу, 
@@ -25,3 +27,8 @@ for i in range(numOfRange):
     numOfSum = int(input("Введите число для суммы: "))
     count += numOfSum
 print(count)
+
+
+# Упражнение 3
+
+
