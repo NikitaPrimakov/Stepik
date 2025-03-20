@@ -116,3 +116,76 @@ while 1 <= num <= 5 and num > 0:
     num = int(input())
     
 print(count)
+
+
+# Упражнение 7
+
+# Всем известно, что ведьмак способен одолеть любых чудовищ, однако его услуги обойдутся недешево. 
+# К тому же ведьмак не принимает купюры, он принимает только чеканные монеты. В мире ведьмака существуют монеты 
+# с номиналами 1,5,10,25.
+
+# Напишите программу, которая определяет, какое минимальное количество чеканных монет нужно заплатить ведьмаку.
+
+num = int(input()) 
+
+counter = 0
+
+while num != 0:
+
+    if num >= 25:
+        num -= 25
+        counter += 1
+    elif num >= 10:
+        num -= 10
+        counter += 1
+    elif num >= 5:
+        num -= 5
+        counter += 1
+    elif num >= 1:
+        num -= 1
+        counter += 1
+    else:
+        counter += 1
+print("counter = ", counter)
+
+
+# ДРУГИЕ СПОСОБЫ РЕШЕНИЯ 
+
+# ВТОРОЙ СПОСОБ
+price = int(input())
+coins = 0
+
+# отсчитываем монеты номиналом по 25
+coins += price // 25
+price %= 25
+
+# отсчитываем монеты номиналом по 10
+coins += price // 10
+price %= 10
+    
+# отсчитываем монеты номиналом по 5
+coins += price // 5
+price %= 5
+    
+# отсчитываем монеты номиналом по 1
+coins += price // 1
+price %= 1
+
+print(coins)
+
+# ВТОРОЙ СПОСОБ
+
+price = int(input())
+coins = 0
+
+while price >= 25:
+    coins += 1
+    price -= 25
+    
+while price >= 10:
+    coins += 1
+    price -= 10
+    
+while price >= 5:
+    coins += 1
+    price -= 5
